@@ -1,4 +1,5 @@
-/* global d3 _ */
+import * as d3 from 'd3'
+import _ from 'lodash'
 // 状态(这里混合了ui状态和数据)
 const state = {
   // type Node = {id: Number, x: Number, y: Number, inS: bool}
