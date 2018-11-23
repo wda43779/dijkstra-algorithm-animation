@@ -1,0 +1,63 @@
+html, body {
+    margin: 0
+}
+
+body {
+  background: #eef;
+}
+
+svg {
+  background: #fff;
+}
+
+circle.node {
+  stroke-width: 1.5px;
+  cursor: pointer;
+}
+
+path.edge {
+  fill: none;
+  stroke: #000;
+  stroke-width: 8px;
+  cursor: default;
+}
+
+svg:not(.active):not(.ctrl) path.edge {
+  cursor: pointer;
+}
+
+path.edge.selected {
+  stroke-dasharray: 10,2;
+}
+
+path.edge.dragline {
+  pointer-events: none;
+}
+
+path.edge.hidden {
+  stroke-width: 0;
+}
+
+path.edge.inS {
+  stroke: orange;
+}
+
+text {
+  font: 20px sans-serif;
+  pointer-events: none;
+}
+
+text.id {
+  fill: white;
+  text-anchor: middle;
+  font-weight: bold;
+}
+
+text.cost {
+    font-size: 20px;
+    text-anchor: middle;
+    font-weight: bold;
+    stroke: white;
+    stroke-width: 1px;
+    fill: black;
+}
