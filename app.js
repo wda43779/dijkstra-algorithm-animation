@@ -1,5 +1,10 @@
 import * as d3 from 'd3'
 import _ from 'lodash'
+
+// 常量
+const NODE_CIRCLE_SIZE = 20// 节点的大小
+const NODE_LABEL_OFFSET_Y = 6 // 节点文字的偏移
+
 // 状态(这里混合了ui状态和数据)
 const state = {
   // type Node = {id: Number, x: Number, y: Number, inS: bool}
@@ -318,11 +323,11 @@ const repaint = () => {
       }
     })
   g.append('svg:circle')
-    .attr('r', '20')
+    .attr('r', NODE_CIRCLE_SIZE)
     .attr('class', 'node')
   g.append('svg:text')
     .attr('x', 0)
-    .attr('y', 6)
+    .attr('y', NODE_LABEL_OFFSET_Y)
     .attr('class', 'id')
     .text(d => id2alpha(d.id))
   nodesJoin.exit().remove()
